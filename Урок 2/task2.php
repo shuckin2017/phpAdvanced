@@ -45,3 +45,4 @@ $c->x = 20;
 echo $c->getX(); // 22
 $d = Plus2::getInstance();
 echo $d->getX(); // 22
+  
