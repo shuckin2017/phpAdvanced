@@ -1,5 +1,5 @@
 <?php
-if (!$_GET['img']) die("No image to show");
+if (!$_GET['img']) die("Нет изображений для показа");
 
 require_once "Twig-1.35.0/lib/Twig/Autoloader.php";
 require_once "core/Database.php";
@@ -18,7 +18,7 @@ $id=intval($_GET['img']);
 
 $result = $mysqli->query("SELECT * FROM gallery WHERE id=$id LIMIT 1");
 
-if (!$result->num_rows) die("No image to show");
+if (!$result->num_rows) die("Нет изображений для показа");
 
 $img = $result->fetch_assoc();
 
