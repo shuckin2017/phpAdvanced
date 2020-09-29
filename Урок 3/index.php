@@ -28,8 +28,8 @@ if($_FILES['img']) {
         $size = $_FILES['img']['size'];
         if (move_uploaded_file($_FILES['img']['tmp_name'], $path.$name)) {
             $message = "Изображение успешно загружено!";
-            $mysqli->query("INSERT INTO gallery ('name', 'path', 'size') VALUES ('$name', '$path', $size)");
-            create_thumbnail($path.$name, $path."thumbnail/tn_".$name, 160, 120);
+            $mysqli->query("INSERT INTO gallery (name, path, size) VALUES ('$name', '$path', $size)");
+            create_thumbnail($path.$name, $path."small/sm_".$name, 160, 120);
         } else {
             $message = "Ошибка при загрузке изображения!";
         }

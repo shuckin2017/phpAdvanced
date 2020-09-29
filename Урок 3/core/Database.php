@@ -12,7 +12,7 @@ class Database
             "localhost",
             "root",
             "root",
-            "gallery");
+            "catalog");
         return self::$mysqli;
     }
     private function __destruct()

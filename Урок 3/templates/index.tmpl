@@ -39,7 +39,7 @@
               <div class="col-md-4 col-sm-2 col-xl-4">
                 <div class="card mb-4 shadow-sm">
                   <a href="show.php?img={{ thumbnail.id }}" >
-                    <img class="card-img-top" src="img/thumbnail/tn_{{ thumbnail.name }}" alt="">
+                    <img class="card-img-top" src="img/small/sm_{{ thumbnail.name }}" alt="">
                   </a>
                   <div class="card-body">
                     <p class="card-text">{{ thumbnail.name }}</p>
@@ -74,14 +74,13 @@
         </button>
       </div>
       <div class="modal-body">
-          <form enctype="multipart/form-data" action="" method="POST">
+          <form enctype="multipart/form-data" action="index.php" method="POST">
             <div class="form-group">
                 <label for="file">Выберите изображение для загрузки</label>
-                <input name="img" id="file" class="form-control-file" type="file">
-                <small id="emailHelp" class="form-text text-muted">{{ message }}</small>
+                <input name="img" id="file" class="form-control-file" type="file" required>
+                <small class="form-text text-muted">{{ message }}</small>
             </div>
             <div>
-              
               <button type="submit" class="btn btn-primary">Отправить</button>
             </div>
         </form>
