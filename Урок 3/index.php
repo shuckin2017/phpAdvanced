@@ -43,6 +43,7 @@ while ($img = $select->fetch_assoc()) {
     $thumbnails[] = $img;
 }
 
+
 echo $template->render([
     'message'    => $message,
     'thumbnails' => $thumbnails
